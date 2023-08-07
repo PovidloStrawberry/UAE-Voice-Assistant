@@ -63,6 +63,28 @@ public class Replic_Script : MonoBehaviour
         }
         
     }
+    public void Voice()
+    {
+        if (has_next_replic)
+        {
+            if (!is_avatar_replic)
+            {
+                avatar.GetComponent<Animator>().Play("Arab_Agreed");
+            }
+            foreach (GameObject replic in Replics.active_replics)
+            {
+                if (gameObject != replic)
+                {
+                    replic.GetComponent<Animator>().Play("Close_Replic");
+                    replic.SetActive(false);
+                }
+            }
+            next_replic.SetActive(true);
+            Replics.active_replics.Add(next_replic);
+            animator.Play("Close_Replic");
+            gameObject.SetActive(false);
+        }
+    }
     public void To_Questions()
     {
         if (!text_panel.Is_Text_Typed)

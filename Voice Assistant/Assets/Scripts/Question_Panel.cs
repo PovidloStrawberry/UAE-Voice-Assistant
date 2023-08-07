@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Question_Panel : MonoBehaviour
 {
-    [SerializeField] Arab_Avatar avatar;
+   // [SerializeField] Arab_Avatar avatar;
     [SerializeField] private string question_text;
     [SerializeField] public string answer_text;
     [SerializeField] public AudioClip answer_audio;
@@ -15,7 +15,7 @@ public class Question_Panel : MonoBehaviour
     }
     public void On_Click()
     {
-        if (avatar.Is_Text_Typed)
-            avatar.Send_Question(this);
+        //if (avatar.Is_Text_Typed)
+            //avatar.Send_Question(this);
     }
 }

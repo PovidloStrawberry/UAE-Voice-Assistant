@@ -7,6 +7,7 @@ public class Controller : MonoBehaviour
 {
     public UnityEvent up_event;
     public UnityEvent down_event;
+
     void Start()
     {
         
