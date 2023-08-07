@@ -9,4 +9,8 @@ public class Text_Panel_Button : MonoBehaviour
     {
         text_panel.On_Click();
     }
+    public void Start()
+    {
+        
+    }
 }

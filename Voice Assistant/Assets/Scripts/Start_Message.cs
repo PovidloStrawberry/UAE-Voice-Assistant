@@ -6,6 +6,8 @@ public class Start_Message : Text_Panel
 {
     [SerializeField] Animator animator;
     [SerializeField] GameObject arab_avatar;
+    [SerializeField] GameObject hi_user_replic;
+    [SerializeField] GameObject micro_button;
     void Start()
     {
         Update_Buttons();
@@ -19,9 +21,11 @@ public class Start_Message : Text_Panel
     }
     private IEnumerator Wait_For_Close()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         arab_avatar.SetActive(true);
-        Destroy(gameObject);
+        micro_button.SetActive(true);
+        hi_user_replic.SetActive(true);
+        gameObject.SetActive(false);
     }
     public override void On_Text_End()
     {
